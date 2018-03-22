@@ -1,0 +1,31 @@
+<h1>Food Orders</h1>
+
+<% @food_orders.each do |food_order| %>
+
+  <h2>Order <%= food_order.ordnum %></h2>
+
+  <p>
+    <strong>Item Name: </strong>
+    <%= food_order.food.name %>
+  </p>
+
+  <p>
+    <strong>Description: </strong>
+    <%= food_order.food.desc %>
+  </p>
+
+  <p>
+    <strong>Size: </strong>
+    <%= food_order.food.quantity %>
+  </p>
+
+  <p>
+    <strong>Notes: </strong>
+    <%= food_order.notes %>
+  </p>
+
+  <p>
+    <%= link_to 'View Details', food_order %>
+  </p>
+
+<% end %>
